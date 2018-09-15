@@ -165,6 +165,8 @@ return [
         Yajra\Datatables\DatatablesServiceProvider::class,
         Stevebauman\Location\LocationServiceProvider::class,
         Nwidart\Modules\LaravelModulesServiceProvider::class,
+        Modules\Website\Providers\WebsiteServiceProvider::class,
+        Modules\Admin\Providers\AdminServiceProvider::class
         
        // Intervention\Image\ImageServiceProvider::class,
 

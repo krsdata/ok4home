@@ -26,6 +26,9 @@ class WebsiteServiceProvider extends ServiceProvider
         $this->registerViews();
         $this->registerFactories();
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
+
+        $this->loadTranslationsFrom(__DIR__ . '/../lang', 'modules');
+
     }
 
     /**
@@ -34,8 +37,9 @@ class WebsiteServiceProvider extends ServiceProvider
      * @return void
      */
     public function register()
-    {
-        //
+    {   
+        include __DIR__ . '/../Http/routes.php';
+        
     }
 
     /**

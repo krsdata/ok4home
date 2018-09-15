@@ -42,7 +42,7 @@ class AppServiceProvider extends ServiceProvider
                 break;
         }
        
-        $countryLanguage = Countrylangs::with('languages')->where('created_country_id',1)->where(array('is_active'=>'1','isDefault'=>1))->first();
+       // $countryLanguage = Countrylangs::with('languages')->where('created_country_id',1)->where(array('is_active'=>'1','isDefault'=>1))->first();
 
         // dd($countryLanguage);
 
@@ -60,6 +60,7 @@ class AppServiceProvider extends ServiceProvider
 
         // Session::put('locale',App::getLocale());
 
+        
        \View::share('lang',App::getLocale());
 
 

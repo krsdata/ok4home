@@ -1,0 +1,16 @@
+{
+    "name": "Kandy",
+    "alias": "kandy",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Kandy\\Providers\\KandyServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

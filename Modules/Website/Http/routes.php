@@ -2,7 +2,7 @@
 
 Route::group(['middleware' => 'web', 'prefix' => 'website', 'namespace' => 'Modules\Website\Http\Controllers'], function()
 {
-//    Route::get('/', 'WebsiteController@index');
+   Route::get('/', 'WebsiteController@index');
 });
 
     
@@ -12,8 +12,11 @@ Route::group(['middleware' => 'web', 'prefix' => '', 'namespace' => 'Modules\Web
 {  
 
 $url = url('/');
-Route::group(array('domain' => $url), function() {
 
+
+Route::group(array('domain' => $url), function() use($url) {
+
+  
     Route::get('/', 'WebsiteController@index');
     Route::get('/login', 'FrontUserLoginController@index');
     Route::post('/post_login', 'FrontUserLoginController@post_login');
